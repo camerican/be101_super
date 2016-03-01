@@ -1,0 +1,27 @@
+
+<h1>Some Hero(e)s!</h1>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Superpower</th>
+		<th>Type</th>
+	</tr>
+<% @heroes.each do |hero| %>
+	<tr>
+		<td><%= link_to hero.name, hero_path(hero) %></td>
+		<td><%= hero.superpower %></td>
+		<td><%= hero.species %></td>
+	</tr>
+<% end %>
+</table>
+
+
+<ol>
+<% somearray = [ 1,2,3] %>
+<% somearray.each do |i| %>
+	<%= raw <<-CLIFFORDTHEBIGREDDOG
+		<li>#{i}</li>
+CLIFFORDTHEBIGREDDOG
+	%>
+<% end %>
+</ol>
